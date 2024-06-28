@@ -14,5 +14,8 @@ jobs:
     name: Validate config
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
       - name: Validate JSON
         run: find . -type f -name '*.json' | xargs tools/json-check.sh
