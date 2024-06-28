@@ -1,7 +1,7 @@
 # GOV.UK Mobile Remote Config
 This is a test repository looking at containerised remote config for the GOV.UK mobile apps.
 
-## Usage
+## Usage
 
 ### To run locally
 
@@ -9,7 +9,7 @@ This is a test repository looking at containerised remote config for the GOV.UK 
 * `docker run -it -p 8080:80 remote-config`
 * Application will be available locally at http://localhost:8080
 
-### Updating config
+### Updating config
 
 Currently any static JSON files inside the /config directory will be included in the container and then served by the nginx server. There is no pre-processing step although we will be adding this soon.
 
