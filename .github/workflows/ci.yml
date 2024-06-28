@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".git**"
+  pull_request:
+
+jobs:
+  validate-config:
+    name: Validate config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate JSON
+        run: find . -type f -name '*.json' | xargs tools/json-check.sh
