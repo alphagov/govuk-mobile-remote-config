@@ -19,3 +19,14 @@ jobs:
           show-progress: false
       - name: Validate JSON
         run: find . -type f -name '*.json' | xargs tools/json-check.sh
+
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+      - uses: actions/setup-node@v4
+      - run: cd tests && npm ci
+      - run: cd tests && npm test
