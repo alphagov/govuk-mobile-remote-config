@@ -15,4 +15,9 @@ describe('appinfo', () => {
         const body = await res.json()
         expect(body.platform).toEqual('iOS')
     })
+
+    it('contains a caching header equal to one hour', async () => {
+        const res = await fetch(`${url}/appinfo/ios`)
+        expect(res.headers.get('Cache-Control')).toEqual('max-age=3600')
+    })
 })

@@ -15,4 +15,9 @@ describe('healthcheck endpoint', () => {
         const contentType = res.headers.get('content-type')
         expect(contentType).toEqual('application/json')
     })
+
+    it('has a no-store directive', async () => {
+        const res = await fetch(`${url}/healthcheck`)
+        expect(res.headers.get('Cache-Control')).toEqual('no-store')
+    })
 })
