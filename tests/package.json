@@ -1,0 +1,16 @@
+{
+  "name": "govuk-mobile-remote-config-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@trendyol/jest-testcontainers": "^2.1.1",
+    "jest": "^29.7.0",
+    "node-fetch": "^2.7.0"
+  }
+}

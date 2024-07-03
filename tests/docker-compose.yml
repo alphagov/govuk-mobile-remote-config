@@ -1,0 +1,7 @@
+services:
+  remote-config:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - 9808:80
